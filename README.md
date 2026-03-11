@@ -27,9 +27,7 @@ Works on:
 (https://poonam-negi.github.io/FastUI_Responsive-Landing-Page/)
 
 ## Project Structure
-project/
-│
-├── index.html
-├── script.js
-├── README.md
-└── Images/
+index.html
+script.js
+README.md
+Images/
