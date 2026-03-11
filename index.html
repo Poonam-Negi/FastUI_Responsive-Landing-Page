@@ -1,96 +1,165 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Responsive Landing Page - Personal Project</title>
 
+<!--enables smooth scrolling on a webpage-->
+<html lang="en" class="scroll-smooth" > 
+
+<head> 
+<meta charset="UTF-8">
+
+<!-- makes website responsive on mobile -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FastUI - Personal Project</title>
+
+<!--Tailwind CDN-->
 <script src="https://cdn.tailwindcss.com"></script>
 
+<!-- enable dark mode using class strategy -->
 <script>
 tailwind.config = {
   darkMode: 'class'
 }
 </script>
-
 </head>
 
+<!-- body -->
 <body class="bg-white text-gray-800 dark:bg-gray-900 dark:text-white">
 
-<!-- NAVBAR -->
-<nav class="shadow-md bg-white dark:bg-gray-800">
-<div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+<!-- header (navbar) -->
+<header class="shadow-lg bg-white dark:bg-gray-800 sticky top-0 z-50">
+   
+<nav class="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center">
 
-<h1 class="text-2xl font-bold text-blue-600">FirstSite</h1>
+    <!-- logo -->
+<h1 class="text-2xl font-bold text-sky-600 italic tracking-wide">
+    <span class="text-blue-600">Fast</span>UI
+</h1>
 
-<ul class="hidden md:flex gap-6">
-<li><a href="#home">Home</a></li>
-<li><a href="#features">Features</a></li>
-<li><a href="#pricing">Pricing</a></li>
-<li><a href="#contact">Contact</a></li>
+    <!--Desktop Menu -->
+<ul class="hidden md:flex gap-12 underline-offset-[14px] text-base">
+<li class="hover:underline decoration-blue-500 decoration-4"><a href="#home">Home</a></li>
+<li class="hover:underline decoration-blue-500 decoration-4"><a href="#gallery">Gallery</a></li>
+<li class="hover:underline decoration-blue-500 decoration-4"><a href="#features">Features</a></li>
+<li class="hover:underline decoration-blue-500 decoration-4"><a href="#pricing">Pricing</a></li>
 </ul>
 
-<div class="flex items-center gap-4">
+<!-- right buttons -->
+<div class="flex items-center gap-8">
 
-<!-- Dark Mode Toggle -->
-<button id="theme-toggle" class="text-xl">🌙</button>
+    <!-- Dark Mode Toggle -->
+<button 
+id="theme-toggle" 
+class="text-xl border-4 border-blue-400 rounded-full hover:border-yellow-400 animate-spin">&#127769;</button>
 
-<!-- Mobile Menu Button -->
-<button id="menu-btn" class="md:hidden text-2xl">
-☰
+    <!-- contact button -->
+<button class="bg-gradient-to-r from-cyan-500 to-blue-500 px-4 py-1 rounded text-white hover:scale-105 transition duration-300">
+    <a href="#contact">Contact</a>
 </button>
 
-</div>
-</div>
-
-<div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
-<a href="#home" class="block py-2">Home</a>
-<a href="#features" class="block py-2">Features</a>
-<a href="#pricing" class="block py-2">Pricing</a>
-<a href="#contact" class="block py-2">Contact</a>
+<!-- Mobile Menu Button -->
+<button 
+id="menu-btn"
+ class="md:hidden text-2xl"
+ aria-label="Open Menu">
+&#x2630;
+</button>
 </div>
 </nav>
 
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-4 underline-offset-8">
+<a href="#home" class="block hover:underline decoration-4 decoration-blue-500 hover:font-bold">Home</a>
+<a href="#gallery" class="block hover:underline decoration-4 decoration-blue-500 hover:font-bold">Gallery</a>
+<a href="#features" class="block hover:underline decoration-4 decoration-blue-500 hover:font-bold">Features</a>
+<a href="#pricing" class="block hover:underline decoration-4 decoration-blue-500 hover:font-bold">Pricing</a>
+<a href="#contact" class="block hover:underline decoration-4 decoration-blue-500 hover:font-bold">Contact</a>
+</div>
+</header>
+
+
+                          <!-- Main Content -->
+<main>
+                           
 <!-- HERO -->
-<section id="home" class="py-20 text-center bg-gray-100 dark:bg-gray-800">
-<h2 class="text-4xl md:text-5xl font-bold mb-6">
-Build Modern Websites Faster
+<section id="home" class="px-20 pt-20 pb-16 shadow-lg hover:bg-blue-600 duration-700 delay-300">
+
+<div class="rounded-xl py-24 text-center bg-gray-200 dark:bg-gray-800">
+<h2 class="text-4xl md:text-5xl font-bold mb-6 text-blue-600">
+Build <span class="text-black">Modern</span> Websites <span class="underline underline-offset-8 decoration-black">Faster</span>
 </h2>
 
-<p class="mb-8 text-gray-600 dark:text-gray-300">
+<p class="mb-8 text-gray-500 italic font-semibold dark:text-gray-300">
 A responsive landing page built with Tailwind CSS.
 </p>
+<button class="bg-blue-600 text-white px-6 py-3 rounded-lg transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-white hover:text-blue-600 font-semibold">
+Get Started</button>
+</div>
+</section>
 
-<button class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">
-Get Started
-</button>
+<!-- Photo Gallery -->
+<section id="gallery">
+<div  class="rounded-xl py-1 text-center bg-gray-200 dark:bg-gray-800">
+<h2 class="text-3xl font-bold text-center mt-14 overline decoration-8 decoration-blue-500 hover:decoration-black">Gallery</h2>
+<p class="text-sm/7 pt-10 text-justify px-40 mx-20 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, distinctio.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus est distinctio nemo aliquam quo vitae sequi nesciunt cumque, qui voluptatum voluptate? Dolores fugiat, tempore, delectus, nemo magnam neque quis inventore consequuntur ex error voluptas cupiditate placeat eius deleniti iure ab.Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati corrupti nam enim aliquam libero accusantium, natus quod corporis saepe itaque voluptas unde, fuga odit fugit, ratione at vitae nesciunt. Itaque!</p>
+                              <!-- image section -->
+<div class="grid gap-4 pb-10">
+    <!-- image 1 -->
+    <div>
+        <img class="h-auto max-w-full rounded-base pt-20 blur-xs grayscale hover:filter-none delay-150 duration-300 ease-in" src="Images/pic1.png" alt="Modern UI example">
+    </div>
+    <!-- responsive grid layout -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 px-20 shadow-lg border-4 py-6">
+        <div class="grid place-items-center blur-xs grayscale hover:filter-none delay-150 duration-300 ease-out ">
+            <img class="h-auto max-w-full rounded-base " src="Images/pic2.png" alt="Modern UI example">
+        </div>
+        <div>
+            <img class="h-auto max-w-full rounded-base blur-xs grayscale hover:filter-none delay-150 duration-300 ease-out" src="Images/pic3.jpg" alt="Modern UI example">
+        </div>
+        <div>
+            <img class="h-auto max-w-full rounded-base blur-xs grayscale hover:filter-none delay-150 duration-300 ease-out" src="Images/pic4.png" alt="Modern UI example">
+        </div>
+        <div>
+            <img class="h-auto max-w-full rounded-base blur-xs grayscale hover:filter-none delay-150 duration-300 ease-out" src="Images/pic5.png" alt="Modern UI example">
+        </div>
+        <div class="grid place-items-center blur-xs grayscale hover:filter-none delay-150 duration-300 ease-out">
+            <img class="h-auto max-w-full rounded-base" src="Images/pic6.png" alt="">
+        </div>
+        <div>
+            <img class="h-auto max-w-full rounded-base blur-xs grayscale hover:filter-none delay-150 duration-300 ease-out" src="Images/pic7.png" alt="Modern UI example">
+        </div>
+    </div>
+</div>
+               <!--Explore more button -->
+<div class="flex justify-center pb-10">
+    <button class="bg-blue-600 text-white px-8 py-3 rounded-lg transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-gray-200 hover:text-blue-600 font-semibold ">Explore More</button>
+</div>
+ </div>
 </section>
 
 <!-- FEATURES -->
-<section id="features" class="py-16">
-<div class="max-w-7xl mx-auto px-6">
-
-<h2 class="text-3xl font-bold text-center mb-12">
+<section id="features" class="py-10">
+<div class="max-w-7xl mx-auto px-6 ">
+           <!-- heading -->
+<h2 class="text-3xl font-bold text-blue-600 text-center mb-12">
 Features
 </h2>
-
+            <!-- card 1 -->
 <div class="grid md:grid-cols-3 gap-8">
 
-<div class="p-6 shadow-lg rounded-lg text-center bg-white dark:bg-gray-800">
+<div class="p-6 shadow-xl rounded-lg text-center bg-white dark:bg-gray-800 transition delay-100 duration-60 ease-in-out hover:-translate-x-1 -translate-y-2 hover:scale-100">
 <h3 class="text-xl font-semibold mb-3">Responsive</h3>
 <p class="text-gray-600 dark:text-gray-300">
 Works across mobile, tablet and desktop.
 </p>
 </div>
-
-<div class="p-6 shadow-lg rounded-lg text-center bg-white dark:bg-gray-800">
+             <!-- card 2 -->
+<div class="p-6 shadow-xl rounded-lg text-center bg-sky-200/60 dark:bg-gray-800 transition delay-100 duration-60 ease-in-out hover:-translate-x-1 -translate-y-2 hover:scale-100">
 <h3 class="text-xl font-semibold mb-3">Fast</h3>
 <p class="text-gray-600 dark:text-gray-300">
 Built with Tailwind CSS for fast development.
 </p>
 </div>
-
-<div class="p-6 shadow-lg rounded-lg text-center bg-white dark:bg-gray-800">
+             <!-- card 3 -->
+<div class="p-6 shadow-xl rounded-lg text-center bg-white dark:bg-gray-800 transition delay-100 duration-60 ease-in-out hover:-translate-x-1 -translate-y-2 hover:scale-100">
 <h3 class="text-xl font-semibold mb-3">Customizable</h3>
 <p class="text-gray-600 dark:text-gray-300">
 Easily customize UI components.
@@ -102,38 +171,39 @@ Easily customize UI components.
 </section>
 
 <!-- PRICING -->
-<section id="pricing" class="py-16 bg-gray-100 dark:bg-gray-800">
+<section id="pricing" class="py-20 bg-gray-100 dark:bg-gray-800">
 <div class="max-w-7xl mx-auto px-6">
-
+         <!-- heading -->
 <h2 class="text-3xl font-bold text-center mb-12">
 Pricing
 </h2>
 
 <div class="grid md:grid-cols-3 gap-8 text-center">
-
-<div class="p-6 bg-white dark:bg-gray-900 shadow-lg rounded-lg">
-<h3 class="text-xl font-bold mb-4">Basic</h3>
+                 <!-- card 1 -->
+<div class="p-6 bg-white dark:bg-gray-900 shadow-md rounded-lg hover:-translate-y-2 hover:scale-100">
+<h3 class="text-xl font-bold mb-4 text-blue-600">Basic</h3>
 <p class="text-3xl font-bold mb-4">$9/mo</p>
 <p class="mb-4">Good for beginners</p>
-<button class="bg-blue-600 text-white px-5 py-2 rounded">
+<button class="bg-blue-600 text-white px-5 py-2 rounded hover:bg-blue-800">
 Choose Plan
 </button>
 </div>
 
-<div class="p-6 bg-white dark:bg-gray-900 shadow-lg rounded-lg">
-<h3 class="text-xl font-bold mb-4">Pro</h3>
+                   <!-- card 2 -->
+<div class="p-6 bg-white dark:bg-gray-900 shadow-2xl rounded-lg hover:-translate-y-2 hover:scale-100">
+<h3 class="text-xl font-bold mb-4 text-blue-600">Pro</h3>
 <p class="text-3xl font-bold mb-4">$29/mo</p>
 <p class="mb-4">Best for professionals</p>
-<button class="bg-blue-600 text-white px-5 py-2 rounded">
+<button class="bg-blue-600 text-white px-5 py-2 rounded hover:bg-blue-800">
 Choose Plan
 </button>
 </div>
-
-<div class="p-6 bg-white dark:bg-gray-900 shadow-lg rounded-lg">
-<h3 class="text-xl font-bold mb-4">Enterprise</h3>
+                  <!-- card 3 -->
+<div class="p-6 bg-white dark:bg-gray-900 shadow-lg rounded-md hover:-translate-y-2 hover:scale-100">
+<h3 class="text-xl font-bold mb-4 text-blue-600">Enterprise</h3>
 <p class="text-3xl font-bold mb-4">$99/mo</p>
 <p class="mb-4">For large businesses</p>
-<button class="bg-blue-600 text-white px-5 py-2 rounded">
+<button class="bg-blue-600 text-white px-5 py-2 rounded hover:bg-blue-800">
 Choose Plan
 </button>
 </div>
@@ -143,64 +213,69 @@ Choose Plan
 </section>
 
 <!-- TESTIMONIALS -->
-<section class="py-16">
+<section class="py-20">
 <div class="max-w-7xl mx-auto px-6 text-center">
-
-<h2 class="text-3xl font-bold mb-12">
+            <!-- heading -->
+<h2 class="text-3xl font-bold mb-12 text-blue-600">
 What Clients Say
 </h2>
 
 <div class="grid md:grid-cols-3 gap-8">
-
-<div class="p-6 shadow-lg rounded-lg bg-white dark:bg-gray-800">
-<p>"Amazing design and easy to customize."</p>
-<h4 class="mt-4 font-semibold">John Doe</h4>
+                  <!-- card 1 -->
+<div class="p-6 shadow-xl rounded-lg bg-sky-200/60 dark:bg-gray-800 ">
+<p class="italic">"Amazing design and easy to customize."</p>
+<h4 class="mt-4 font-semibold">-  John Doe</h4>
 </div>
-
-<div class="p-6 shadow-lg rounded-lg bg-white dark:bg-gray-800">
-<p>"Perfect for building modern websites."</p>
-<h4 class="mt-4 font-semibold">Sarah Smith</h4>
+                 <!-- card 2 -->
+<div class="p-6 shadow-xl rounded-lg bg-white dark:bg-gray-800">
+<p class="italic">"Perfect for building modern websites."</p>
+<h4 class="mt-4 font-semibold">-  Sarah Smith</h4>
 </div>
-
-<div class="p-6 shadow-lg rounded-lg bg-white dark:bg-gray-800">
-<p>"Clean UI and responsive layout."</p>
-<h4 class="mt-4 font-semibold">David Lee</h4>
+                 <!-- card 3 -->
+<div class="p-6 shadow-xl rounded-lg bg-sky-200/60 dark:bg-gray-800">
+<p class="italic">"Clean UI and responsive layout."</p>
+<h4 class="mt-4 font-semibold">-  David Lee</h4>
 </div>
 
 </div>
 </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" class="py-16 bg-gray-100 dark:bg-gray-800">
-<div class="max-w-xl mx-auto px-6">
 
-<h2 class="text-3xl font-bold text-center mb-8">
+<!-- CONTACT -->
+<section id="contact" class="py-16 bg-gray-200 dark:bg-gray-800">
+<div class="max-w-xl mx-auto px-6">
+               <!-- heading -->
+<h2 class="text-3xl font-bold text-center mb-8 hover:underline underline-offset-8 decoration-4 decoration-blue-500">
 Contact Us
 </h2>
 
+
+                          <!-- contact form -->
 <form class="space-y-4">
 
-<input type="text" placeholder="Name"
-class="w-full p-3 border rounded dark:bg-gray-900">
+<input type="text" placeholder="Name" aria-label="Name"  required
+class="w-full p-3 border rounded focus:outline-2 focus:outline-offset-2 focus:outline-blue-400  dark:bg-gray-900">
 
-<input type="email" placeholder="Email"
-class="w-full p-3 border rounded dark:bg-gray-900">
+<input type="email" placeholder="Email" aria-label="email"  required
+class="w-full p-3 border rounded focus:outline-2 focus:outline-offset-2 focus:outline-blue-400 dark:bg-gray-900">
 
-<textarea placeholder="Message"
-class="w-full p-3 border rounded dark:bg-gray-900"></textarea>
+<textarea placeholder="Message" aria-label="text-box"
+class="w-full p-3 border rounded focus:outline-2 focus:outline-offset-2 focus:outline-blue-400 dark:bg-gray-900"></textarea>
 
-<button class="w-full bg-blue-600 text-white py-3 rounded">
+<button class="w-full bg-blue-600 text-white py-3 rounded hover:bg-blue-800 transition delay-100 duration-60 ease-in-out hover:-translate-y-1 hover:scale-100">
 Send Message
 </button>
 
 </form>
 </div>
 </section>
+</main>
+
 
 <!-- FOOTER -->
-<footer class="bg-gray-900 text-white py-6 text-center">
-<p>© 2026 FirstSite. All rights reserved.</p>
+<footer class="bg-gray-900 text-white py-10 text-center">
+<p>&#169; 2026 - Designed with &#10084;</p>
 </footer>
 
 <script src="script.js"></script>
